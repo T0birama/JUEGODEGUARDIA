@@ -47,6 +47,12 @@ public class Timer : MonoBehaviour
         textoDelReloj = minutos.ToString("00") + ":" + segundos.ToString("00");
 
         timer.text = textoDelReloj; 
+
+        if(tiempoEnSegundos >= 360)
+        {
+            Pausar();
+            StartCoroutine(Gameover());
+        }
     }
 
     // Update is called once per frame
@@ -62,7 +68,7 @@ public class Timer : MonoBehaviour
     {
         if (!estaPausado)
         {
-            estaPausado = false;
+            estaPausado = true;
             escaladoDelTiempoAlPausar = escalaDelTiempo;
             escalaDelTiempo = 0;
         }
@@ -77,9 +83,17 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void ResetTimer()
+    {
+        estaPausado = false;
+        escalaDelTiempo = escalaDelTimpoInicial;
+        tiempoAMostrarEnSegundos = TiempoInicial;
+        ActualizarReloj(tiempoAMostrarEnSegundos);
+    }
+
     IEnumerator Gameover()
     {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("GameOver");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Niños");
     }
 }
