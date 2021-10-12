@@ -20,6 +20,8 @@ public class TimerParaAtrapar : MonoBehaviour
     public float escaladoDelTiempoAlPausar, escalaDelTimpoInicial;
     private bool estaPausado = false;
     public GameObject textodeTimer;
+    public GameObject LinternaCollider;
+    public Enemy enemy;
 
 
     public float tiempo = 75f;
@@ -55,6 +57,8 @@ public class TimerParaAtrapar : MonoBehaviour
             textodeTimer.SetActive(false);
             ResetTimer();
             TimelinePuertasAbrir.Play();
+            LinternaCollider.SetActive(false);
+            enemy.MasRapida();
             
         }
     }
