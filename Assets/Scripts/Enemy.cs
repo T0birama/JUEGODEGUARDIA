@@ -32,10 +32,6 @@ public class Enemy : MonoBehaviour
             target = GameObject.Find("Doc");
        }
 
-       if(agent.speed == 0.0f)
-        {
-            anim.SetBool("stopped", true);
-        }
 
 
         agent.SetDestination(target.transform.position);
@@ -80,6 +76,7 @@ public class Enemy : MonoBehaviour
     public void EstaAtrapado()
     {
         agent.speed = 0.0f;
+        anim.SetBool("Atrapado", true);
     }
 
     public void MasRapida()

@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 
 public class TimerParaAtrapar : MonoBehaviour
 {
+    public ColliderParaLadron colliderParaLadron;
     public PlayableDirector TimelinePuertasAbrir;
     public Text timer;
     [Tooltip("Tiempo inicial en segundos")]
@@ -59,6 +60,7 @@ public class TimerParaAtrapar : MonoBehaviour
             TimelinePuertasAbrir.Play();
             LinternaCollider.SetActive(false);
             enemy.MasRapida();
+            colliderParaLadron.TimeLinePuertas();
             
         }
     }

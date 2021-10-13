@@ -13,6 +13,7 @@ public class ColliderParaLadron : MonoBehaviour
     public PlayableDirector TimelinePuertas;
     public GameObject LinternaCollider;
     public Enemy enemy;
+    public GameObject luzDePuerta;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class ColliderParaLadron : MonoBehaviour
                 TimerParaAtrapar.SetActive(true);
                 TextoParaAtrapar.SetActive(true);
                 LinternaCollider.SetActive(true);
+                luzDePuerta.SetActive(true);
                 TimelinePuertas.Play();
                 enemy.EstaAtrapado();
                 
@@ -57,6 +59,7 @@ public class ColliderParaLadron : MonoBehaviour
     public void TimeLinePuertas()
     {
         TimelinePuertas.Stop();
+        luzDePuerta.SetActive(false);
     }
 
 
