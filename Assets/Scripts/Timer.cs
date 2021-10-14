@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public TextMesh timer;
+    public TextMeshPro timer;
     [Tooltip("Tiempo inicial en segundos")]
     public int TiempoInicial;
 
