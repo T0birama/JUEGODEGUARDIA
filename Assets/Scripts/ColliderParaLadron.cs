@@ -10,7 +10,7 @@ public class ColliderParaLadron : MonoBehaviour
     public GameObject TextoParaAtrapar;
     public int TiempoParaAtrapar;
     bool EstaLadron;
-    public PlayableDirector TimelinePuertas;
+    
     public GameObject LinternaCollider;
     public Enemy enemy;
     public GameObject luzDePuerta;
@@ -31,7 +31,6 @@ public class ColliderParaLadron : MonoBehaviour
                 TextoParaAtrapar.SetActive(true);
                 LinternaCollider.SetActive(true);
                 luzDePuerta.SetActive(true);
-                TimelinePuertas.Play();
                 enemy.EstaAtrapado();
                 
             }
@@ -58,7 +57,7 @@ public class ColliderParaLadron : MonoBehaviour
 
     public void TimeLinePuertas()
     {
-        TimelinePuertas.Stop();
+        
         luzDePuerta.SetActive(false);
     }
 
