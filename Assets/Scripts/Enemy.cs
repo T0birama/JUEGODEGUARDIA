@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     private GameObject target;
     private GameObject EscapeTarget;
     public GameObject Ladron;
+    public bool EstaPlayer = false;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -41,6 +43,10 @@ public class Enemy : MonoBehaviour
             agent.SetDestination(target.transform.position);
         }
 
+        if(EstaPlayer== true)
+        {
+            SceneManager.LoadScene("Gameover");
+        }
         
         float Dist = Vector3.Distance(target.transform.position, this.transform.position);
 
@@ -72,13 +78,23 @@ public class Enemy : MonoBehaviour
             StartCoroutine(ladronDes());
             Grito.SetActive(false);
         }
+
     
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            EstaPlayer = true;
+        }
     }
 
     public void EstaAtrapado()
     {
         agent.speed = 0.0f;
         anim.SetBool("Atrapado", true);
+        EstaPlayer = false;
     }
 
     public void MasRapida()

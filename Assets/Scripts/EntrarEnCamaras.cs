@@ -66,4 +66,8 @@ public class EntrarEnCamaras : MonoBehaviour
             InterfazDeCambiar.SetActive(false);
         }
     }
+
+
+
+   
 }
