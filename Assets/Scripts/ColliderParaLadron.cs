@@ -8,6 +8,7 @@ public class ColliderParaLadron : MonoBehaviour
     public GameObject InterfaceParaAtrapar;
     public GameObject TimerParaAtrapar;
     public GameObject TextoParaAtrapar;
+    public GameObject Alarma;
     public int TiempoParaAtrapar;
     bool EstaLadron;
     
@@ -31,6 +32,7 @@ public class ColliderParaLadron : MonoBehaviour
                 TextoParaAtrapar.SetActive(true);
                 LinternaCollider.SetActive(true);
                 luzDePuerta.SetActive(true);
+                Alarma.SetActive(true);
                 enemy.EstaAtrapado();
                 
             }
@@ -57,8 +59,9 @@ public class ColliderParaLadron : MonoBehaviour
 
     public void TimeLinePuertas()
     {
-        
+        Alarma.SetActive(false);
         luzDePuerta.SetActive(false);
+        Debug.Log("luzApagada");
     }
 
 

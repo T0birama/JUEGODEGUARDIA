@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 public class Enemy : MonoBehaviour
 {
     Animator anim;
+    public GameObject Grito;
     public PlayableDirector LinternaTimeline;
     private NavMeshAgent agent;
     private GameObject target;
@@ -69,6 +70,7 @@ public class Enemy : MonoBehaviour
         {
             anim.SetBool("escape",false);
             StartCoroutine(ladronDes());
+            Grito.SetActive(false);
         }
     
     }
@@ -91,6 +93,7 @@ public class Enemy : MonoBehaviour
         target = EscapeTarget;
         agent.SetDestination(target.transform.position);
         agent.speed = 7.0f;
+        Grito.SetActive(true);
         
 
 
@@ -100,6 +103,7 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         agent.speed = 3.5f;
+        
         Ladron.SetActive(false);
     }
 
