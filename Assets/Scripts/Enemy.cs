@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject target;
     private GameObject EscapeTarget;
+    private GameObject PlayerTarget;
     public GameObject Ladron;
     public bool EstaPlayer = false;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         target = GameObject.Find("Doc");
         EscapeTarget = GameObject.Find("Escape");
+        PlayerTarget = GameObject.Find("Player");
         
         agent = GetComponent<NavMeshAgent>();
     }
@@ -60,6 +62,14 @@ public class Enemy : MonoBehaviour
         }
         
         
+    }
+
+    public void TargetPlayer()
+    {
+        anim.SetBool("escape",true);
+        target=PlayerTarget;
+        agent.SetDestination(target.transform.position);
+        agent.speed = 7.0f;
     }
 
     private void OnTriggerEnter(Collider other)

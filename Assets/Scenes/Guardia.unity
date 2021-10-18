@@ -9038,6 +9038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderParaLadron: {fileID: 1379601178}
+  ColliderParaPlayer: {fileID: 1263485340}
   timer: {fileID: 875552563}
   TiempoInicial: 30
   escalaDelTiempo: -1
@@ -9402,6 +9403,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509098567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &509157015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509157017}
+  - component: {fileID: 509157016}
+  m_Layer: 0
+  m_Name: Sonido de linterna
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &509157016
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509157015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: a247cea7e11cab044a1f07e896aada3d, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 3647665379608644522, guid: a247cea7e11cab044a1f07e896aada3d, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &509157017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509157015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.071241, y: 5.235589, z: 8.291462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &510008417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba262a677d7986649ade973daccbde8c, type: 3}
@@ -9551,6 +9602,7 @@ MonoBehaviour:
   LinternaCollider: {fileID: 408453937}
   enemy: {fileID: 1182118252}
   luzDePuerta: {fileID: 1547772447}
+  ColliderParaPlayer: {fileID: 1263485340}
 --- !u!1 &529747336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98907fab1d332bf4492cdc9b5f6d8542, type: 3}
@@ -10170,6 +10222,7 @@ MonoBehaviour:
   LinternaCollider: {fileID: 408453937}
   enemy: {fileID: 1182118252}
   luzDePuerta: {fileID: 1307258149}
+  ColliderParaPlayer: {fileID: 1263485340}
 --- !u!4 &541188927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fbbb475455b674b46b82371a0d109a50, type: 3}
@@ -12144,6 +12197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderParaLadron: {fileID: 540013635}
+  ColliderParaPlayer: {fileID: 1263485340}
   timer: {fileID: 875552563}
   TiempoInicial: 30
   escalaDelTiempo: -1
@@ -14641,6 +14695,7 @@ MonoBehaviour:
   LinternaCollider: {fileID: 408453937}
   enemy: {fileID: 1182118252}
   luzDePuerta: {fileID: 958372084}
+  ColliderParaPlayer: {fileID: 1263485340}
 --- !u!1 &875552562
 GameObject:
   m_ObjectHideFlags: 0
@@ -22272,6 +22327,64 @@ MonoBehaviour:
   f1: 0
   f2: 0
   f3: 500
+--- !u!1 &1263485340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1263485341}
+  - component: {fileID: 1263485343}
+  - component: {fileID: 1263485342}
+  m_Layer: 0
+  m_Name: ColliderParaPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1263485341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263485340}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1182118257}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263485342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263485340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6605877657bee54c9d38d3274bc1fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1182118252}
+--- !u!65 &1263485343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263485340}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 2, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1273144192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25898,6 +26011,7 @@ MonoBehaviour:
   LinternaCollider: {fileID: 408453937}
   enemy: {fileID: 1182118252}
   luzDePuerta: {fileID: 534297191}
+  ColliderParaPlayer: {fileID: 1263485340}
 --- !u!1 &1381113878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11358764047d4184ea535130d538b6a4, type: 3}
@@ -25951,6 +26065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderParaLadron: {fileID: 526275949}
+  ColliderParaPlayer: {fileID: 1263485340}
   timer: {fileID: 875552563}
   TiempoInicial: 30
   escalaDelTiempo: -1
@@ -29155,6 +29270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579306509}
   - component: {fileID: 1579306508}
+  - component: {fileID: 1579306510}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -29188,6 +29304,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579306510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579306507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a20fca471f123f44f8d66c9b6fd8bd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583253836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11358764047d4184ea535130d538b6a4, type: 3}
@@ -31016,6 +31144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LinternaMesh: {fileID: 1880254158}
   Luz: {fileID: 1058435262}
+  Slinterna: {fileID: 509157016}
 --- !u!1001 &1750620928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36643,6 +36772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colliderParaLadron: {fileID: 872364950}
+  ColliderParaPlayer: {fileID: 1263485340}
   timer: {fileID: 875552563}
   TiempoInicial: 30
   escalaDelTiempo: -1

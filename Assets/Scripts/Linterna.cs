@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Linterna : MonoBehaviour
 {
     public GameObject LinternaMesh;
     public GameObject Luz;
     private bool encendida;
+    public PlayableDirector Slinterna;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +25,12 @@ public class Linterna : MonoBehaviour
             if (encendida)
             {
                 Luz.SetActive(false);
+                Slinterna.Play();
             }
             else
             {
                 Luz.SetActive(true);
+                Slinterna.Play();
             }
         }
     }

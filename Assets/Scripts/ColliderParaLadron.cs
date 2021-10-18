@@ -15,6 +15,7 @@ public class ColliderParaLadron : MonoBehaviour
     public GameObject LinternaCollider;
     public Enemy enemy;
     public GameObject luzDePuerta;
+    public GameObject ColliderParaPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class ColliderParaLadron : MonoBehaviour
                     LinternaCollider.SetActive(true);
                     luzDePuerta.SetActive(true);
                     Alarma.SetActive(true);
+                    ColliderParaPlayer.SetActive(false);
                     enemy.EstaAtrapado();
 
                 }
