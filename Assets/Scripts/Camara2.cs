@@ -13,6 +13,7 @@ public class Camara2 : MonoBehaviour
     public GameObject CamaraManager;
     public GameObject Linterna;
     public GameObject Vision;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class Camara2 : MonoBehaviour
 
             Player.SetActive(true);
             Linterna.SetActive(true);
-
+            
             gameObject.SetActive(false);
             Vision.SetActive(false);
             

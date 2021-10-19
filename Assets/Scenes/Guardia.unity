@@ -17261,6 +17261,7 @@ MonoBehaviour:
   InterfazDeCamara2: {fileID: 1326005244}
   Linterna: {fileID: 1880254158}
   vision: {fileID: 1287437387}
+  ColliderParaPlayer: {fileID: 1263485340}
   PuedeApretar: 0
 --- !u!65 &978380681
 BoxCollider:
@@ -22340,7 +22341,7 @@ GameObject:
   - component: {fileID: 1263485342}
   m_Layer: 0
   m_Name: ColliderParaPlayer
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,7 @@ public class EntrarEnCamaras : MonoBehaviour
     public GameObject InterfazDeCamara2;
     public GameObject Linterna;
     public GameObject vision;
+    public GameObject ColliderParaPlayer;
     public bool PuedeApretar = false;
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class EntrarEnCamaras : MonoBehaviour
                 gameObject.SetActive(false);
                 InterfazDeCamara2.SetActive(true);
                 InterfazDeCambiar.SetActive(false);
+                ColliderParaPlayer.SetActive(false);
 
                 CamaraDeSala.SetActive(true);
                 Player.SetActive(false);

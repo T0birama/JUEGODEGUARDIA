@@ -13,6 +13,7 @@ public class Camara3 : MonoBehaviour
     public GameObject Linterna;
     public GameObject Vision;
     public GameObject estecollider;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class Camara3 : MonoBehaviour
 
             gameObject.SetActive(false);
             Vision.SetActive(false);
+            
 
 
         }
